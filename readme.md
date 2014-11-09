@@ -12,7 +12,7 @@ replacement was made.
 
 ### Demo
 
-![Demo](https://raw.github.com/shagabutdinov/sublime-join-lines-enhanced/master/demo/demo.gif "Demo")
+![Demo](https://github.com/shagabutdinov/sublime-enhanced-demos/raw/master/join_lines_enhanced.gif "Demo")
 
 
 ### Installation
@@ -41,3 +41,8 @@ package.
 | Description       | Keyboard shortcut | Command palette         |
 |-------------------|-------------------|-------------------------|
 | Join lines        | ctrl+t            | JoinLinesEnhanced: join |
+
+
+### Dependencies
+
+None

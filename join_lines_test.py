@@ -61,5 +61,14 @@ class JoinStringTest(unittest.TestCase):
   def test_join_is_joined_with_preceding_minus_greater(self):
     self.assertEqual('ONE->TWO', join('ONE->\n TWO'))
 
+  def test_join_is_joined_with_preceding_comma(self):
+    self.assertEqual('ONE, TWO', join('ONE,\n TWO'))
+
+  def test_join_is_joined_with_preceding_comma_with_quote(self):
+    self.assertEqual('ONE, "TWO', join('ONE,\n "TWO'))
+
+  def test_join_is_joined_with_following_comma(self):
+    self.assertEqual('ONE, TWO', join('ONE\n, TWO'))
+
 if __name__ == '__main__':
   unittest.main()

@@ -1,11 +1,17 @@
 [
   {
     "keys": ["ctrl+t"],
-    "command": "join_lines_enhanced"
+    "command": "join_lines_enhanced",
+    "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
+    ]
   },
 
   {
     "keys": ["ctrl+u", "t"],
-    "command": "join_lines"
+    "command": "join_lines",
+    "context": [
+      {"key": "setting.sublime_enhanced_keybindings", "operator": "equal", "operand": true},
+    ]
   },
 ]

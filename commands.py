@@ -1,6 +1,8 @@
 import sublime
 import sublime_plugin
+
 import re
+
 from JoinLinesEnhanced import join_lines
 
 class JoinLinesEnhanced(sublime_plugin.TextCommand):
