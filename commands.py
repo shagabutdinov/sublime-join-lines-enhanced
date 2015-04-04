@@ -36,9 +36,10 @@ class JoinLinesEnhanced(sublime_plugin.TextCommand):
       if start > end:
         start, end = end, start
 
+    start = self.view.line(start).begin()
     text = self.view.substr(sublime.Region(start, end))
     cursor = start + re.search("\n", text).start(0)
-    text = join_lines.join(text)
+    text, offset = join_lines.join(text)
 
     self.view.replace(edit, sublime.Region(start, end), text)
 
@@ -47,6 +48,8 @@ class JoinLinesEnhanced(sublime_plugin.TextCommand):
     else:
       if self.view.substr(sublime.Region(cursor, cursor + 1)) == ' ':
         cursor += 1
+
+      cursor += offset
       cursor = [cursor] * 2
 
     return cursor
